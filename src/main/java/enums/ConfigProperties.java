@@ -7,8 +7,8 @@ public enum ConfigProperties {
     // <editor-fold desc="config.properties enum">
     BROWSER_BASE_URL("browser_base_url"),
     BROWSER_DRIVER("browser_driver"),
-    BROWSER_BASE_WIDTH("browser_based_width"),
-    BROWSER_BASE_HEIGHT("browser_based_height");
+    BROWSER_BASE_WIDTH("browser_base_width"),
+    BROWSER_BASE_HEIGHT("browser_base_height");
     // </editor-fold>
 
 

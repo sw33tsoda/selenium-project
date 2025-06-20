@@ -8,12 +8,12 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.List;
 
 public class HomePage extends BasePage {
-    public String path = "";
+    private final String path = "";
 
-    @FindBy(xpath = "//*[@id=\"app\"]/header/a/img[@src=\nhttps://demoqa.com/images/Toolsqa.jpg]\n]")
+    @FindBy(xpath = "//*[@id='app']/header/a/img")
     private WebElement header;
 
-    @FindBy(xpath = "//*[@id=\"app\"]/div/div/div[1]/a/img[@src=\nhttps://demoqa.com/images/WB.svg\n]")
+    @FindBy(xpath = "//*[@id='app']/div/div/div[1]/a/img")
     private WebElement banner;
 
     @FindBy(css = ".top-card")
@@ -22,6 +22,10 @@ public class HomePage extends BasePage {
     public HomePage(WebDriver incomingDriver) {
         super(incomingDriver);
         PageFactory.initElements(driver, this);
+    }
+
+    public String getPath() {
+        return path;
     }
 
     public WebElement getHeader() {

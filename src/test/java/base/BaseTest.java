@@ -6,6 +6,8 @@ import org.openqa.selenium.WebDriver;
 import utils.ConfigReader;
 import utils.WebDriverFactory;
 
+import java.util.Optional;
+
 public abstract class BaseTest {
     protected WebDriver driver;
 
@@ -19,7 +21,8 @@ public abstract class BaseTest {
     }
 
     protected void navigateFromBase(String path) {
-        String url = String.join(ConfigReader.getBaseURL(), path);
+        String baseUrl = ConfigReader.getBaseURL();
+        String url = baseUrl.concat(path.isBlank() ? "" : path);
         driver.navigate().to(url);
     }
 }
